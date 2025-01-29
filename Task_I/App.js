@@ -5,6 +5,7 @@ import {
   Image,
   ImageBackground,
   Linking,
+  Pressable,
   StyleSheet,
   Text,
   View,
@@ -20,26 +21,26 @@ export default function App() {
         }}
       ></ImageBackground>
       <View style={styles.container}>
-        <View style={styles.btn1}>
-          <Button
-            title="HNG React-Native Devs"
-            color="white"
-            onPress={() => {
-              Linking.openURL("https://hng.tech/hire/react-native-developers");
-            }}
-          />
-          <Ionicons name="arrow-forward-circle" color="white" size={32} />
-        </View>
-        <View style={styles.btn2}>
-          <Ionicons name="logo-github" color="black" size={32} />
-          <Button
-            title="GitHub Repo"
-            color="black"
-            onPress={() => {
-              Linking.openURL("https://github.com/NkwiCyril/HNG_Internship");
-            }}
-          />
-        </View>
+        <Pressable
+          onPress={() => {
+            Linking.openURL("https://hng.tech/hire/react-native-developers");
+          }}
+        >
+          <View style={styles.btn1}>
+            <Button title="HNG React-Native Devs" color="white" />
+            <Ionicons name="arrow-forward-circle" color="white" size={32} />
+          </View>
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            Linking.openURL("https://github.com/NkwiCyril/HNG_Internship");
+          }}
+        >
+          <View style={styles.btn2}>
+            <Ionicons name="logo-github" color="black" size={32} />
+            <Button title="GitHub Repo" color="black" />
+          </View>
+        </Pressable>
       </View>
       <StatusBar style="auto" />
     </View>
