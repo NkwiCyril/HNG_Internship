@@ -2,7 +2,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
 import {
   Button,
-  Image,
   ImageBackground,
   Linking,
   Pressable,
@@ -19,7 +18,14 @@ export default function App() {
         source={{
           uri: "https://images.unsplash.com/photo-1737265396686-00377dcd99d0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         }}
-      ></ImageBackground>
+      >
+        {/* Sprinkled Icons */}
+        <Ionicons name="laptop" size={24} color="#00aeff" style={styles.icon1} />
+        <Ionicons name="code" size={24} color="#00aeff" style={styles.icon2} />
+        <Ionicons name="code" size={24} color="#00aeff" style={styles.icon3} />
+        <Ionicons name="rocket" size={24} color="#00aeff" style={styles.icon4} />
+        <Ionicons name="rocket" size={24} color="#00aeff" style={styles.icon5} />
+      </ImageBackground>
       <View style={styles.container}>
         <Pressable
           onPress={() => {
@@ -90,10 +96,33 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
 
-  // icon: {
-  //   marginHorizontal: 10,
-  //   borderRadius: "50%",
-  //   backgroundColor: "white",
-  //   padding: 10,
-  // },
+  icon1: {
+    position: "absolute",
+    top: "10%",
+    left: "10%",
+  },
+
+  icon2: {
+    position: "absolute",
+    top: "20%",
+    right: "15%",
+  },
+
+  icon3: {
+    position: "absolute",
+    bottom: "30%",
+    left: "5%",
+  },
+
+  icon4: {
+    position: "absolute",
+    bottom: "15%",
+    right: "20%",
+  },
+
+  icon5: {
+    position: "absolute",
+    top: "5%",
+    right: "5%",
+  },
 });
