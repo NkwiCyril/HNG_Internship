@@ -33,7 +33,7 @@ export default function App() {
           }}
         >
           <View style={styles.btn1}>
-            <Button title="HNG React-Native Devs" color="white" />
+            <Button title="HNG React-Native Devs" />
             <Ionicons name="arrow-forward-circle" color="white" size={32} />
           </View>
         </Pressable>
@@ -43,7 +43,7 @@ export default function App() {
           }}
         >
           <View style={styles.btn2}>
-            <Ionicons name="logo-github" color="black" size={32} />
+            <Ionicons name="logo-github" size={32} />
             <Button title="GitHub Repo" color="black" />
           </View>
         </Pressable>
